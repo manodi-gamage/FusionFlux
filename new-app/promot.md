@@ -1,1 +1,1 @@
-Map functionality does not seem to work. Can you analyze and fix any bugs? Improve UI and UX too.
+The website makes the lives of tourists that visit Sri Lanka easy. Add a new page for currency coversion. So, tourists can select their currency and convert the amount to Sri Lankan Rupees.
