@@ -1,86 +1,47 @@
-/* Header Top Section */
 .header {
-    font-family: Arial, sans-serif;
-    width: 100%;
-  }
-  
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-  }
-  
-  .logo img {
-    height: 50px;
-  }
-  
-  .nav-links ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-links ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-  }
-  
-  .contact .phone-link {
-    text-decoration: none;
-    color: #007bff;
-  }
-  
-  /* Header Banner Section */
-  .header-banner {
-    text-align: center;
-    background-image: url('/path-to-your-banner-image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 50px 20px;
-  }
-  
-  .header-banner h1 {
-    font-size: 3rem;
-  }
-  
-  .header-banner p {
-    font-size: 1.5rem;
-  }
-  
-  /* Search Bar */
-  .search-bar {
-    margin-top: 20px;
-  }
-  
-  .search-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .search-tabs li {
-    list-style: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .search-form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .search-form input,
-  .search-form button {
-    padding: 10px;
-  }
-  
-  .search-form button {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  width:97.5vw
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav ul li a:hover {
+  color: #007bff; /* Optional hover effect */
+}
+
+.contact .contact-button {
+  background-color: #001f5b; /* Dark blue */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact .contact-button:hover {
+  background-color: #0056b3; /* Slightly lighter blue */
+}
