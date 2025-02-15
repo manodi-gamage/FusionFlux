@@ -6,7 +6,7 @@ const destinations = [
   {
     id: 1,
     name: 'Sigiriya',
-    image: 'https://images.unsplash.com/photo-1586613168754-9e8a66fad03b',
+    image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ed/85/6b/um-palacio-no-topo-da.jpg?w=1200&h=1200&s=1',
     description: 'Ancient palace and fortress complex with stunning views.',
     activities: ['Rock Climbing', 'Historical Tours', 'Photography'],
     bestTime: 'Early Morning',
@@ -15,7 +15,7 @@ const destinations = [
   {
     id: 2,
     name: 'Galle Fort',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
+    image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/24/05/e0/galle-fort.jpg?w=900&h=500&s=1',
     description: 'UNESCO World Heritage site with Dutch colonial architecture.',
     activities: ['Walking Tours', 'Shopping', 'Sunset Views'],
     bestTime: 'Late Afternoon',
@@ -24,7 +24,7 @@ const destinations = [
   {
     id: 3,
     name: 'Ella',
-    image: 'https://images.unsplash.com/photo-1586613168185-9a30989b11d3',
+    image: 'https://media-cdn.tripadvisor.com/media/photo-c/1280x250/0d/bc/05/aa/ella.jpg',
     description: 'Scenic mountain village famous for hiking and tea plantations.',
     activities: ['Hiking', 'Tea Tasting', 'Train Rides'],
     bestTime: 'Morning',
@@ -33,16 +33,16 @@ const destinations = [
   {
     id: 4,
     name: 'Yala National Park',
-    image: 'https://images.unsplash.com/photo-1590418606746-018840f9cd0f',
+    image: 'https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/f2/0f/25.jpg',
     description: 'Famous wildlife sanctuary home to leopards and elephants.',
     activities: ['Safari Tours', 'Bird Watching', 'Photography'],
-    bestTime: 'Early Morning/Late Afternoon',
+    bestTime: 'Early Morning',
     duration: 'Half Day',
   },
   {
     id: 5,
     name: 'Polonnaruwa',
-    image: 'https://images.unsplash.com/photo-1625736036341-0a2a647b5686',
+    image: 'https://www.storyofsrilanka.com/images/slider/sri-lanka-guide-destinations/polonnaruwa/01.jpg',
     description: 'Ancient city with well-preserved ruins and archaeological sites.',
     activities: ['Cycling Tours', 'Historical Tours', 'Photography'],
     bestTime: 'Morning',
@@ -51,7 +51,7 @@ const destinations = [
   {
     id: 6,
     name: 'Mirissa Beach',
-    image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5',
+    image: 'https://lp-cms-production.imgix.net/2021-03/Mirissa_beach_Sri_Lanka.jpg',
     description: 'Popular beach destination for whale watching and surfing.',
     activities: ['Whale Watching', 'Surfing', 'Beach Activities'],
     bestTime: 'December to April',
