@@ -40,6 +40,11 @@ export default function Footer() {
                                     Translator
                                 </Link>
                             </li>
+                            <li>
+                                <Link to="/weather" className="text-sm text-muted-foreground hover:text-primary">
+                                    Weather Forecast
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
