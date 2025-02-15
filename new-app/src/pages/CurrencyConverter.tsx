@@ -39,44 +39,46 @@ export default function CurrencyConverter() {
     };
 
     return (
-        <div className="container py-8">
-            <h1 className="text-4xl font-bold mb-8 text-center">Currency Converter</h1>
-            <Card className="max-w-md mx-auto p-6">
-                <div className="space-y-6">
-                    <div className="space-y-2">
-                        <Label htmlFor="amount">Amount</Label>
-                        <Input
-                            id="amount"
-                            type="number"
-                            placeholder="Enter amount"
-                            value={amount}
-                            onChange={(e) => setAmount(e.target.value)}
-                        />
+        <div className="container py-8 flex items-center justify-center min-h-screen">
+            <div className="w-full max-w-xl">
+                <h1 className="text-4xl font-bold mb-8 text-center">Currency Converter</h1>
+                <Card className="p-6">
+                    <div className="space-y-6">
+                        <div className="space-y-2">
+                            <Label htmlFor="amount">Amount</Label>
+                            <Input
+                                id="amount"
+                                type="number"
+                                placeholder="Enter amount"
+                                value={amount}
+                                onChange={(e) => setAmount(e.target.value)}
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <Label>Select Currency</Label>
+                            <Select value={currency} onValueChange={setCurrency}>
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Select currency" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    {currencies.map((curr) => (
+                                        <SelectItem key={curr.code} value={curr.code}>
+                                            {curr.code} - {curr.name}
+                                        </SelectItem>
+                                    ))}
+                                </SelectContent>
+                            </Select>
+                        </div>
+
+                        <Button className="w-full" onClick={handleConvert}>
+                            Convert to LKR
+                        </Button>
+
+                        {result && <div className="mt-4 p-4 bg-secondary rounded-lg text-center text-lg">{result}</div>}
                     </div>
-
-                    <div className="space-y-2">
-                        <Label>Select Currency</Label>
-                        <Select value={currency} onValueChange={setCurrency}>
-                            <SelectTrigger>
-                                <SelectValue placeholder="Select currency" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                {currencies.map((curr) => (
-                                    <SelectItem key={curr.code} value={curr.code}>
-                                        {curr.code} - {curr.name}
-                                    </SelectItem>
-                                ))}
-                            </SelectContent>
-                        </Select>
-                    </div>
-
-                    <Button className="w-full" onClick={handleConvert}>
-                        Convert to LKR
-                    </Button>
-
-                    {result && <div className="mt-4 p-4 bg-secondary rounded-lg text-center text-lg">{result}</div>}
-                </div>
-            </Card>
+                </Card>
+            </div>
         </div>
     );
 }
