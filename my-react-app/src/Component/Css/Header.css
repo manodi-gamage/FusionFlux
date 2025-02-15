@@ -5,7 +5,9 @@
   padding: 10px 20px;
   background-color: white;
   border-bottom: 1px solid #ddd;
-  width:97.5vw
+  width:98%;
+  position:fixed;
+  top: 0;
 }
 
 .logo img {
@@ -40,6 +42,7 @@
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  width: 100px;
 }
 
 .contact .contact-button:hover {
