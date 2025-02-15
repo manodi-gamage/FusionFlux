@@ -1,0 +1,85 @@
+/* Header Top Section */
+.header {
+    font-family: Arial, sans-serif;
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .contact .phone-link {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  /* Header Banner Section */
+  .header-banner {
+    text-align: center;
+    background-image: url('/path-to-your-banner-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 50px 20px;
+  }
+  
+  .header-banner h1 {
+    font-size: 3rem;
+  }
+  
+  .header-banner p {
+    font-size: 1.5rem;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    margin-top: 20px;
+  }
+  
+  .search-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .search-tabs li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .search-form input,
+  .search-form button {
+    padding: 10px;
+  }
+  
+  .search-form button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
