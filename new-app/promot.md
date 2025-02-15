@@ -1,1 +1,1 @@
-Add a little blur to the hero image. Add a fancy animation to the text. Improve the overall user experience and design of the home page.
+Style the weather page radically. Use icons from the lucide-react.
