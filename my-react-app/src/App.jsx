@@ -9,6 +9,7 @@ function App() {
     <Router>
       <div>
         <Header />
+        
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/translator" element={<Translator/>} />
