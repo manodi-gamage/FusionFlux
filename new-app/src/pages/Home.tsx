@@ -8,19 +8,19 @@ const destinations = [
     {
         id: 1,
         name: 'Sigiriya',
-        image: 'https://images.unsplash.com/photo-1586613168754-9e8a66fad03b',
+        image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ed/85/6b/um-palacio-no-topo-da.jpg?w=1200&h=1200&s=1',
         description: 'Ancient palace and fortress complex with stunning views.',
     },
     {
         id: 2,
         name: 'Galle Fort',
-        image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Galle_Fort.jpg/640px-Galle_Fort.jpg',
         description: 'UNESCO World Heritage site with Dutch colonial architecture.',
     },
     {
         id: 3,
         name: 'Ella',
-        image: 'https://images.unsplash.com/photo-1586613168185-9a30989b11d3',
+        image: 'https://www.erikastravels.com/wp-content/uploads/2017/10/9-Arch-Bridge-Train.jpg',
         description: 'Scenic mountain village famous for hiking and tea plantations.',
     },
 ];
