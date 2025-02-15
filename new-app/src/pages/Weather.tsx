@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { WiThermometer, WiHumidity, WiStrongWind } from 'react-icons/wi';
+import './Weather.css';
+import { useTheme } from '../hooks/useTheme'; // Import the useTheme hook
 
 export default function Weather() {
     const [forecast, setForecast] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const { theme } = useTheme(); // Get the current theme
 
     useEffect(() => {
         const fetchWeather = async () => {
@@ -25,7 +29,6 @@ export default function Weather() {
         fetchWeather();
     }, []);
 
-    // Helper function to format the date
     const formatDate = (date) => {
         const options = { weekday: 'long', month: 'long', day: 'numeric' };
         return new Date(date).toLocaleDateString(undefined, options);
@@ -39,46 +42,42 @@ export default function Weather() {
         return <p>{error}</p>;
     }
 
-    // Get today's and tomorrow's forecast
-    const today = forecast.list.filter(item => {
-        const todayDate = new Date().setHours(0, 0, 0, 0);
-        return new Date(item.dt * 1000).setHours(0, 0, 0, 0) === todayDate;
-    })[0]; // The first entry for today
-    const tomorrow = forecast.list.filter(item => {
-        const tomorrowDate = new Date();
-        tomorrowDate.setDate(tomorrowDate.getDate() + 1);
-        tomorrowDate.setHours(0, 0, 0, 0);
-        return new Date(item.dt * 1000).setHours(0, 0, 0, 0) === tomorrowDate;
-    })[0]; // The first entry for tomorrow
+    const forecastDays = forecast.list.reduce((days, item) => {
+        const day = new Date(item.dt * 1000).setHours(0, 0, 0, 0);
+        if (!days.some(d => d.date === day)) {
+            days.push({
+                date: day,
+                data: forecast.list.filter(i => new Date(i.dt * 1000).setHours(0, 0, 0, 0) === day),
+            });
+        }
+        return days;
+    }, []);
 
     return (
         <div className="container py-12">
-            <h1 className="text-2xl font-bold mb-4">Weather Forecast</h1>
-            <p className="text-muted-foreground">
-                Get the latest weather updates for your favorite destinations in Sri Lanka.
-            </p>
+            <div className="weather-header">
+                <h1 className="text-2xl font-bold mb-4">Weather Forecast</h1>
+                <p className="text-muted-foreground">
+                    Get the latest weather updates for your favorite destinations in Sri Lanka.
+                </p>
+            </div>
 
-            {/* Today */}
-            {today && (
-                <div>
-                    <h2 className="text-xl font-semibold">Today - {formatDate(today.dt * 1000)}</h2>
-                    <p>{today.weather[0].description}</p>
-                    <p>Temperature: {today.main.temp}°C</p>
-                    <p>Humidity: {today.main.humidity}%</p>
-                    <p>Wind Speed: {today.wind.speed} m/s</p>
-                </div>
-            )}
-
-            {/* Tomorrow */}
-            {tomorrow && (
-                <div className="mt-6">
-                    <h2 className="text-xl font-semibold">Tomorrow - {formatDate(tomorrow.dt * 1000)}</h2>
-                    <p>{tomorrow.weather[0].description}</p>
-                    <p>Temperature: {tomorrow.main.temp}°C</p>
-                    <p>Humidity: {tomorrow.main.humidity}%</p>
-                    <p>Wind Speed: {tomorrow.wind.speed} m/s</p>
-                </div>
-            )}
+            <div className="weather-cards-wrapper">
+                {forecastDays.map((day, index) => {
+                    const dayData = day.data[0];
+                    return (
+                        <div key={index} className="weather-card">
+                            <h2 className="date-heading">{formatDate(day.date)}</h2>
+                            <p className="weather-description">{dayData.weather[0].description}</p>
+                            <div className="weather-stats">
+                                <p><WiThermometer /> {dayData.main.temp}°C</p>
+                                <p><WiHumidity /> {dayData.main.humidity}%</p>
+                                <p><WiStrongWind /> {dayData.wind.speed} m/s</p>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
