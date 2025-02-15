@@ -1,0 +1,3 @@
+Create a modern and stylish website. It is a website that tourists can use to explore tourist destinations, hotels and activities in Sri Lanka. There is a map page. Where, tourists can enter a destination and get the path using Google Maps. There is a translator page. Where toursits can translate between Sinhala and English. The homepage should have animations using framer motion. It should feature a search section. It should have a featured tourist destinations section, a testimonials section. It should have a page that lists hotels. Use dummy data in each of the pages for now. Use localized Sri Lankan dummy data.
+
+The website should use shadcn, framer-motion, axios.

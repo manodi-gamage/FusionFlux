@@ -15,7 +15,7 @@ const Header = () => {
           <li><a href="#sports-tours">Sports Tours</a></li>
           <li><a href="/Translator">Translator</a></li>
           <li><a href="#about-us">About Us</a></li>
-          <li><a href="#contact-us">Contact Us</a></li>
+          <li><a href="/Contactus">Contact Us</a></li>
         </ul>
       </nav>
       <div className="contact">
