@@ -8,7 +8,7 @@ const destinations = [
   {
     id: 1,
     name: 'Sigiriya',
-    image: 'https://images.unsplash.com/photo-1586613168754-9e8a66fad03b',
+    image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ed/85/6b/um-palacio-no-topo-da.jpg?w=1200&h=1200&s=1',
     description: 'Ancient palace and fortress complex with stunning views.',
   },
   {
@@ -20,7 +20,7 @@ const destinations = [
   {
     id: 3,
     name: 'Ella',
-    image: 'https://images.unsplash.com/photo-1586613168185-9a30989b11d3',
+    image: 'https://media-cdn.tripadvisor.com/media/photo-c/1280x250/0d/bc/05/aa/ella.jpg',
     description: 'Scenic mountain village famous for hiking and tea plantations.',
   },
 ];
