@@ -10,6 +10,7 @@ import Hotels from '@/pages/Hotels';
 import Map from '@/pages/Map';
 import Translator from '@/pages/Translator';
 import CurrencyConverter from '@/pages/CurrencyConverter';
+import Chat from '@/pages/Chat';
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
                                 <Route path="/map" element={<Map />} />
                                 <Route path="/translator" element={<Translator />} />
                                 <Route path="/currency" element={<CurrencyConverter />} />
+                                <Route path="/chat" element={<Chat />} />
                             </Routes>
                         </AnimatePresence>
                     </motion.main>
