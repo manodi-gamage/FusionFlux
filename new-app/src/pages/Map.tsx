@@ -78,16 +78,12 @@ export default function Map() {
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium">Search anywhere</label>
                                     <div className="flex items-center gap-2 w-full">
-                                        <Autocomplete 
-                                            onLoad={onLoad} 
+                                        <Autocomplete
+                                            onLoad={onLoad}
                                             onPlaceChanged={onPlaceChanged}
                                             className="w-full"
                                         >
-                                            <Input 
-                                                type="text" 
-                                                placeholder="Enter location..." 
-                                                className="w-full"
-                                            />
+                                            <Input type="text" placeholder="Enter location..." className="w-full" />
                                         </Autocomplete>
                                         <Button size="icon" className="flex-shrink-0">
                                             <Search className="h-4 w-4" />
